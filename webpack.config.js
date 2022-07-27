@@ -5,7 +5,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  output: { filename: 'bundle.js', path: path.resolve(__dirname, 'build') },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
+    assetModuleFilename: 'images/[hash][ext][query]',
+  },
   stats: 'errors-only',
 
   module: {
@@ -24,12 +28,13 @@ module.exports = {
           'sass-loader',
         ],
       },
+      { test: /\.html$/i, loader: 'html-loader' },
     ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({ template: 'src/index.html' }),
-    new MiniCssExtractPlugin({ filename: 'styles.css' }),
+    new MiniCssExtractPlugin({ filename: 'css/styles.css' }),
     new CleanWebpackPlugin(),
   ],
 

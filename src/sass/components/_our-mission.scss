@@ -1,0 +1,52 @@
+.our-mission {
+  background-color: var(--dark-color);
+  padding-top: 100px;
+
+  @media screen and (max-width: 390px) {
+    padding: 0px;
+  }
+
+  &__container {
+    display: flex;
+
+    @media screen and (max-width: 390px) {
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    @media screen and (max-width: 390px) {
+      flex-wrap: wrap;
+      order: 2;
+
+      margin-top: 30px;
+      width: 310px;
+    }
+  }
+
+  &__info {
+    width: 495px;
+    margin-left: 125px;
+    padding-top: 50px;
+
+    @media screen and (max-width: 390px) {
+      width: 100%;
+      margin: 0;
+      order: 1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    color: var(--white-color);
+  }
+
+  &__button {
+    padding: 15px 36px;
+    margin-top: 30px;
+  }
+}

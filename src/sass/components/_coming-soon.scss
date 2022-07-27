@@ -1,0 +1,204 @@
+.coming-soon {
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(50% - 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 166px;
+    height: 54px;
+    padding: 10px;
+    text-transform: uppercase;
+
+    background-color: var(--white-color);
+    border: 1px solid var(--dark-color);
+    border-top: none;
+
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+    font-family: 'Monument Extended';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 95%;
+    letter-spacing: 0.5px;
+  }
+
+  &__item:nth-child(2) &__label {
+    background-color: var(--orangy-color);
+  }
+  &__item:nth-child(3) &__label {
+    background-color: var(--salmon-color);
+  }
+  &__item:nth-child(4) &__label {
+    background-color: var(--baby-blue-color);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    width: 50%;
+    min-height: 600px;
+    padding: 100px 20px 20px 20px;
+
+    text-align: center;
+
+    @media screen and (max-width: 390px) {
+      border-right: none;
+      border-bottom: 1px solid var(--dark-color);
+      width: 100%;
+      min-height: 400px;
+    }
+
+    &:nth-child(odd) {
+      border-right: 1px solid var(--dark-color);
+      @media screen and (max-width: 390px) {
+        border-right: none;
+      }
+    }
+    &:not(:nth-last-of-type(-n + 2)) {
+      border-bottom: 1px solid var(--dark-color);
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    width: 390px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 390px) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 310px;
+
+    @media screen and (max-width: 390px) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    margin-top: 20px;
+
+    @media screen and (max-width: 390px) {
+      margin-top: 50px;
+      width: 223px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+  }
+
+  &__item:nth-child(1) &__icon {
+    &--blood {
+      top: 0px;
+      right: 0px;
+
+      @media screen and (max-width: 390px) {
+        top: 10px;
+        right: 13px;
+      }
+    }
+
+    &--swab {
+      bottom: 0;
+      right: 100px;
+
+      @media screen and (max-width: 390px) {
+        bottom: 51px;
+        right: 30px;
+      }
+    }
+
+    &--urine {
+      top: 0px;
+      left: 50px;
+
+      @media screen and (max-width: 390px) {
+        top: 22px;
+        left: 0px;
+      }
+    }
+  }
+
+  &__item:nth-child(2) &__icon {
+    &--blood {
+      bottom: 20px;
+      left: 100px;
+
+      @media screen and (max-width: 390px) {
+        bottom: 210px;
+        left: 250px;
+      }
+    }
+
+    &--swab {
+      top: 0px;
+      left: 0px;
+    }
+
+    &--urine {
+      top: 50px;
+      right: 50px;
+
+      @media screen and (max-width: 390px) {
+        top: 170px;
+        right: 180px;
+      }
+    }
+  }
+
+  &__item:nth-child(3) &__icon {
+    &--blood {
+      bottom: 150px;
+      left: 50px;
+
+      @media screen and (max-width: 390px) {
+        bottom: 210px;
+        left: 230px;
+      }
+    }
+  }
+
+  &__item:nth-child(4) &__icon {
+    &--swab {
+      top: 0px;
+      left: 0px;
+
+      @media screen and (max-width: 390px) {
+        top: 13px;
+        left: 7px;
+      }
+    }
+
+    &--urine {
+      top: 50px;
+      right: 80px;
+
+      @media screen and (max-width: 390px) {
+        top: 166px;
+        right: 78px;
+      }
+    }
+  }
+}

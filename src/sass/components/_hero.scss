@@ -1,0 +1,50 @@
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 670px;
+  margin-top: 111px;
+
+  border-top: 1px solid var(--dark-color);
+  background: linear-gradient(180deg, #dedde2 0%, #e3e6ed 44.29%, #dde6ef 100%);
+
+  @media screen and (max-width: 390px) {
+    height: 750px;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    height: 100%;
+
+    @media screen and (max-width: 390px) {
+      bottom: 0;
+
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin-top: 100px;
+    width: 510px;
+
+    @media screen and (max-width: 390px) {
+      text-align: center;
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    padding: 15.5px 36px;
+
+    @media screen and (max-width: 390px) {
+      display: block;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

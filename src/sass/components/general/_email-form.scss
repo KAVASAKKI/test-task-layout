@@ -1,0 +1,37 @@
+.email-form {
+  position: relative;
+
+  &__input {
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+
+    font-size: 12pt;
+    outline: none;
+
+    transition: all 100ms linear;
+
+    &:active,
+    &:focus {
+      border-color: var(--blue-color);
+    }
+    &:active + .email-form__button,
+    &:focus + .email-form__button {
+      background-color: var(--salmon-color);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--orangy-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--dark-color);
+
+    cursor: pointer;
+
+    transition: all 100ms linear;
+  }
+}

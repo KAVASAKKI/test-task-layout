@@ -1,0 +1,140 @@
+.footer {
+  background-color: var(--dark-color);
+
+  &__container {
+    @media screen and (max-width: 390px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 80px;
+    padding-bottom: 90px;
+
+    @media screen and (max-width: 390px) {
+      flex-direction: column;
+
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 400px;
+    height: 130px;
+
+    &-mobile {
+      display: none;
+
+      @media screen and (max-width: 390px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (max-width: 390px) {
+      display: none;
+    }
+  }
+
+  &__cta {
+    @media screen and (max-width: 390px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    min-width: 140px;
+    height: 53px;
+    margin-top: 10px;
+
+    box-shadow: 5px 5px 0px 0px var(--white-color);
+    &:hover {
+      box-shadow: 3px 3px 0px 0px var(--white-color);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #524c45;
+
+    padding: 40px 0px;
+
+    @media screen and (max-width: 390px) {
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    @media screen and (max-width: 390px) {
+      order: 3;
+    }
+  }
+}
+
+.social-media {
+  display: flex;
+
+  @media screen and (max-width: 390px) {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media screen and (max-width: 390px) {
+      display: flex;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    color: var(--white-color);
+
+    & + &::before {
+      content: '/';
+      padding: 0px 5px 0px 10px;
+    }
+  }
+}
+
+.email-form {
+  &--footer {
+    @media screen and (max-width: 390px) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @media screen and (max-width: 390px) {
+      display: block;
+    }
+  }
+
+  &__input--footer {
+    width: 320px;
+    height: 50px;
+
+    padding: 10px 120px 10px 20px;
+  }
+
+  &__button--footer {
+    height: 50px;
+    width: 115px;
+  }
+}
